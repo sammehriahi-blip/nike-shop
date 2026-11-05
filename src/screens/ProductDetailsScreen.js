@@ -14,6 +14,10 @@ const ProductDetailsScreen = () => {
   const product = products[0];
   const { width } = useWindowDimensions();
 
+  const addToCart = () => {
+    console.warn('add to cart');
+  };
+
   return (
     <View style={{ flex: 1 }}>
       <ScrollView>
@@ -38,8 +42,8 @@ const ProductDetailsScreen = () => {
       </ScrollView>
 
       {/* Bouton */}
-      <Pressable style={styles.button}>
-        <Text style={styles.buttonText}>Ajouter au panier</Text>
+      <Pressable onPress={addToCart} style={styles.button}>
+        <Text style={styles.buttonText}>Add to cart</Text>
       </Pressable>
     </View>
   );
